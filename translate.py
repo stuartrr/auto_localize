@@ -40,7 +40,7 @@ def translate_text_with_openai(text, source_lang, target_lang, context=None):
     # end if
 
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        engine="gpt-3.5-turbo-instruct",
         prompt=prompt,
         temperature=0,
         max_tokens=1000,
