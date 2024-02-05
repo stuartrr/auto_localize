@@ -4,7 +4,7 @@ openai.api_key = read_open_ai_token()
 
 def translate_text(text, source_lang, target_lang):
     response = openai.Completion.create(
-        engine="text-davinci-003",
+        engine="gpt-3.5-turbo-instruct",
         prompt=f"Translate the following text from {source_lang} to {target_lang}: {text}",
         temperature=0,
         max_tokens=1000
